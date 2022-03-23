@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt('请1~1000以内的数字'));
+        if (a>1000 || a <1) {
+            alert ('输入的数字不合法');
+
+        }else {
+            if (a%2==0 && a%3==0) {
+                alert('可以被2或3整除');
+            }else {
+                alert('不能被2或者3整除');
+            }
+        }
+    </script>
+</body>
+</html>
