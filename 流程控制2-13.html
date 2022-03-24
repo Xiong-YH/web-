@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt('请输入性别'),
+            b = prompt('请输入身高'),
+            c = prompt('请输入体重');
+        if (a == '女') {
+            d = (b - 70) * 0.6;
+            if (c <= d * 1.05 && c >= d * 0.95) {
+                alert('体重正常')
+            } else if (c > d * 1.05) {
+                alert('该锻炼身体减肥了哦')
+            } if (c < d * 0.95)  {
+                alert('太瘦了，要多补充营养哦')
+            }
+
+        } else {
+            d = ((b - 80 )* 6.05 && c >= d * 0.95) 
+                alert('体重正常');
+            } if (c > d * 1.05) {
+                alert('该锻炼身体减肥了哦');
+            }else {
+                alert('太瘦了，要多补充营养哦');
+            }
+        
+    </script>
+</body>
+
+</html>
