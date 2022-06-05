@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        // 定义红绿灯
+        function light () {
+            this.color = 1;
+            this.init();
+            this.event();
+        };
+        // 初始化图片方法
+        light.prototype.init = function() {
+            this.dom = document.createElement('img');
+            this.dom.src = 'images/'+this.color+'.jpg';
+            box.appendChild(this.dom);
+        };
+        // 绑定监听
+        light.prototype.event = function() {
+            var self = this;
+            this.dom.onclick = function () {
+                self.changecolor();
+            };
+        };
+        // 改变颜色
+        light.prototype.changecolor = function () {
+            this.color++;
+            if(this.color == 4) {
+                this.color = 1;
+            }
+            this.dom.src = 'images/'+this.color+'.jpg';
+        }
+        var box = document.getElementById('box');
+        new light();
+    </script>
+</body>
+</html>
